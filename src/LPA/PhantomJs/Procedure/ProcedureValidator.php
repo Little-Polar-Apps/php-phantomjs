@@ -6,23 +6,23 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
-use Lpa\PhantomJs\Validator\EngineInterface;
-use Lpa\PhantomJs\Exception\SyntaxException;
-use Lpa\PhantomJs\Exception\RequirementException;
+use LittlePolarApps\PhantomJs\Validator\EngineInterface;
+use LittlePolarApps\PhantomJs\Exception\SyntaxException;
+use LittlePolarApps\PhantomJs\Exception\RequirementException;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ProcedureValidator implements ProcedureValidatorInterface
 {
     /**
      * Procedure loader.
      *
-     * @var \Lpa\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @var \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface
      * @access protected
      */
     protected $procedureLoader;
@@ -30,7 +30,7 @@ class ProcedureValidator implements ProcedureValidatorInterface
     /**
      * Validator engine
      *
-     * @var \Lpa\PhantomJs\Validator\EngineInterface
+     * @var \LittlePolarApps\PhantomJs\Validator\EngineInterface
      * @access protected
      */
     protected $engine;
@@ -39,8 +39,8 @@ class ProcedureValidator implements ProcedureValidatorInterface
      * Internal constructor.
      *
      * @access public
-     * @param \Lpa\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
-     * @param \Lpa\PhantomJs\Validator\EngineInterface          $engine
+     * @param \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
+     * @param \LittlePolarApps\PhantomJs\Validator\EngineInterface          $engine
      */
     public function __construct(ProcedureLoaderInterface $procedureLoader, EngineInterface $engine)
     {
@@ -54,7 +54,7 @@ class ProcedureValidator implements ProcedureValidatorInterface
      * @access public
      * @param  string                                                   $procedure
      * @return boolean
-     * @throws \Lpa\PhantomJs\Exception\ProcedureValidationException
+     * @throws \LittlePolarApps\PhantomJs\Exception\ProcedureValidationException
      */
     public function validate($procedure)
     {
@@ -70,7 +70,7 @@ class ProcedureValidator implements ProcedureValidatorInterface
      * @access protected
      * @param  string                                      $procedure
      * @return void
-     * @throws \Lpa\PhantomJs\Exception\SyntaxException
+     * @throws \LittlePolarApps\PhantomJs\Exception\SyntaxException
      */
     protected function validateSyntax($procedure)
     {
@@ -96,7 +96,7 @@ class ProcedureValidator implements ProcedureValidatorInterface
      * @access protected
      * @param  string                                           $procedure
      * @return void
-     * @throws \Lpa\PhantomJs\Exception\RequirementException
+     * @throws \LittlePolarApps\PhantomJs\Exception\RequirementException
      */
     protected function validateRequirements($procedure)
     {

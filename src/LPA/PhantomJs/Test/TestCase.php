@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Test;
+namespace LittlePolarApps\PhantomJs\Test;
 
-use Lpa\PhantomJs\DependencyInjection\ServiceContainer;
+use LittlePolarApps\PhantomJs\DependencyInjection\ServiceContainer;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class TestCase extends \PHPUnit_Framework_TestCase
 {
@@ -21,7 +21,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
      * Get dependency injection container.
      *
      * @access public
-     * @return \Lpa\PhantomJs\DependencyInjection\ServiceContainer
+     * @return \LittlePolarApps\PhantomJs\DependencyInjection\ServiceContainer
      */
     public function getContainer()
     {

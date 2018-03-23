@@ -6,17 +6,17 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Tests\Unit\Template;
+namespace LittlePolarApps\PhantomJs\Tests\Unit\Template;
 
 use Twig_Environment;
 use Twig_Loader_String;
-use Lpa\PhantomJs\Http\Request;
-use Lpa\PhantomJs\Template\TemplateRenderer;
+use LittlePolarApps\PhantomJs\Http\Request;
+use LittlePolarApps\PhantomJs\Template\TemplateRenderer;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class TemplateRendererTest extends \PHPUnit_Framework_TestCase
 {
@@ -107,7 +107,7 @@ class TemplateRendererTest extends \PHPUnit_Framework_TestCase
     /**
      * Get template renderer instance.
      *
-     * @return \Lpa\PhantomJs\Message\TemplateRenderer
+     * @return \LittlePolarApps\PhantomJs\Message\TemplateRenderer
      */
     protected function getTemplateRenderer()
     {
@@ -122,7 +122,7 @@ class TemplateRendererTest extends \PHPUnit_Framework_TestCase
      * Get request
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Http\Request
+     * @return \LittlePolarApps\PhantomJs\Http\Request
      */
     protected function getRequest()
     {

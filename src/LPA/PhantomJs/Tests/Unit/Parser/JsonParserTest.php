@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Tests\Unit\Parser;
+namespace LittlePolarApps\PhantomJs\Tests\Unit\Parser;
 
-use Lpa\PhantomJs\Parser\JsonParser;
+use LittlePolarApps\PhantomJs\Parser\JsonParser;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class JsonParserTest extends \PHPUnit_Framework_TestCase
 {
@@ -198,7 +198,7 @@ class JsonParserTest extends \PHPUnit_Framework_TestCase
      * Get JSON parser instance.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Parser\JsonParser
+     * @return \LittlePolarApps\PhantomJs\Parser\JsonParser
      */
     protected function getJsonParser()
     {

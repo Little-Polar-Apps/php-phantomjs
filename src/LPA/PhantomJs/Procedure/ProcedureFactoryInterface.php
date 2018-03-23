@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Lpa\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 interface ProcedureFactoryInterface
 {
@@ -20,7 +20,7 @@ interface ProcedureFactoryInterface
      * Create new procedure instance.
      *
      * @access public
-     * @return \Lpa\PhantomJs\Procedure\ProcedureInterface
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureInterface
      */
     public function createProcedure();
 }

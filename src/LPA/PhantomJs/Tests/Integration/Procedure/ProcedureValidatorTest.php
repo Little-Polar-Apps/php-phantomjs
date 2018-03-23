@@ -6,20 +6,20 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Tests\Integration\Procedure;
+namespace LittlePolarApps\PhantomJs\Tests\Integration\Procedure;
 
 use Symfony\Component\Config\FileLocator;
-use Lpa\PhantomJs\Client;
-use Lpa\PhantomJs\Procedure\Procedure;
-use Lpa\PhantomJs\Procedure\ProcedureLoaderInterface;
-use Lpa\PhantomJs\Procedure\ProcedureValidator;
-use Lpa\PhantomJs\Validator\Esprima;
-use Lpa\PhantomJs\Validator\EngineInterface;
+use LittlePolarApps\PhantomJs\Client;
+use LittlePolarApps\PhantomJs\Procedure\Procedure;
+use LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface;
+use LittlePolarApps\PhantomJs\Procedure\ProcedureValidator;
+use LittlePolarApps\PhantomJs\Validator\Esprima;
+use LittlePolarApps\PhantomJs\Validator\EngineInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
 {
@@ -38,7 +38,7 @@ class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testProcedureSyntaxExceptionIsThrownIfProcedureContainsSyntaxError()
     {
-        $this->setExpectedException('\Lpa\PhantomJs\Exception\SyntaxException');
+        $this->setExpectedException('\LittlePolarApps\PhantomJs\Exception\SyntaxException');
 
         $procedureLoader = $this->getProcedureLoader();
         $esprima         = $this->getEsprima();
@@ -63,7 +63,7 @@ class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
             $validator = $this->getValidator($procedureLoader, $esprima);
             $validator->validate('return false; var');
 
-        } catch (\Lpa\PhantomJs\Exception\SyntaxException $e) {
+        } catch (\LittlePolarApps\PhantomJs\Exception\SyntaxException $e) {
             $this->assertNotEmpty($e->getErrors());
         }
     }
@@ -78,7 +78,7 @@ class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testRequirementExceptionIsThrownIfProcedureDoesNotContainPhanomtExitStatement()
     {
-        $this->setExpectedException('\Lpa\PhantomJs\Exception\RequirementException');
+        $this->setExpectedException('\LittlePolarApps\PhantomJs\Exception\RequirementException');
 
         $procedureLoader = $this->getProcedureLoader();
         $esprima         = $this->getEsprima();
@@ -128,9 +128,9 @@ class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
      * Get procedure validator.
      *
      * @access protected
-     * @param  \Lpa\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
-     * @param  \Lpa\PhantomJs\Validator\EngineInterface          $engine
-     * @return \Lpa\PhantomJs\Procedure\ProcedureValidator
+     * @param  \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
+     * @param  \LittlePolarApps\PhantomJs\Validator\EngineInterface          $engine
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureValidator
      */
     protected function getValidator(ProcedureLoaderInterface $procedureLoader, EngineInterface $engine)
     {
@@ -143,7 +143,7 @@ class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
      * Get procedure loader.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Procedure\ProcedureLoader
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureLoader
      */
     protected function getProcedureLoader()
     {
@@ -154,7 +154,7 @@ class ProcedureValidatorTest extends \PHPUnit_Framework_TestCase
      * Get esprima.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Validator\Esprima
+     * @return \LittlePolarApps\PhantomJs\Validator\Esprima
      */
     protected function getEsprima()
     {

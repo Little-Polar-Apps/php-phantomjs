@@ -6,23 +6,23 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Tests\Unit\Procedure;
+namespace LittlePolarApps\PhantomJs\Tests\Unit\Procedure;
 
 use Twig_Environment;
 use Twig_Loader_String;
-use Lpa\PhantomJs\Engine;
-use Lpa\PhantomJs\Cache\FileCache;
-use Lpa\PhantomJs\Cache\CacheInterface;
-use Lpa\PhantomJs\Parser\JsonParser;
-use Lpa\PhantomJs\Parser\ParserInterface;
-use Lpa\PhantomJs\Template\TemplateRenderer;
-use Lpa\PhantomJs\Template\TemplateRendererInterface;
-use Lpa\PhantomJs\Procedure\ProcedureFactory;
+use LittlePolarApps\PhantomJs\Engine;
+use LittlePolarApps\PhantomJs\Cache\FileCache;
+use LittlePolarApps\PhantomJs\Cache\CacheInterface;
+use LittlePolarApps\PhantomJs\Parser\JsonParser;
+use LittlePolarApps\PhantomJs\Parser\ParserInterface;
+use LittlePolarApps\PhantomJs\Template\TemplateRenderer;
+use LittlePolarApps\PhantomJs\Template\TemplateRendererInterface;
+use LittlePolarApps\PhantomJs\Procedure\ProcedureFactory;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ProcedureFactoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -47,7 +47,7 @@ class ProcedureFactoryTest extends \PHPUnit_Framework_TestCase
 
         $procedureFactory = $this->getProcedureFactory($engine, $parser, $cache, $renderer);
 
-        $this->assertInstanceOf('\Lpa\PhantomJs\Procedure\Procedure', $procedureFactory->createProcedure());
+        $this->assertInstanceOf('\LittlePolarApps\PhantomJs\Procedure\Procedure', $procedureFactory->createProcedure());
     }
 
 /** +++++++++++++++++++++++++++++++++++ **/
@@ -58,11 +58,11 @@ class ProcedureFactoryTest extends \PHPUnit_Framework_TestCase
      * Get procedure factory instance.
      *
      * @access protected
-     * @param  \Lpa\PhantomJs\Engine                             $engine
-     * @param  \Lpa\PhantomJs\Parser\ParserInterface             $parser
-     * @param  \Lpa\PhantomJs\Cache\CacheInterface               $cacheHandler
-     * @param  \Lpa\PhantomJs\Template\TemplateRendererInterface $renderer
-     * @return \Lpa\PhantomJs\Procedure\ProcedureFactory
+     * @param  \LittlePolarApps\PhantomJs\Engine                             $engine
+     * @param  \LittlePolarApps\PhantomJs\Parser\ParserInterface             $parser
+     * @param  \LittlePolarApps\PhantomJs\Cache\CacheInterface               $cacheHandler
+     * @param  \LittlePolarApps\PhantomJs\Template\TemplateRendererInterface $renderer
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureFactory
      */
     protected function getProcedureFactory(Engine $engine, ParserInterface $parser, CacheInterface $cacheHandler, TemplateRendererInterface $renderer)
     {
@@ -75,7 +75,7 @@ class ProcedureFactoryTest extends \PHPUnit_Framework_TestCase
      * Get engine.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Engine
+     * @return \LittlePolarApps\PhantomJs\Engine
      */
     protected function getEngine()
     {
@@ -88,7 +88,7 @@ class ProcedureFactoryTest extends \PHPUnit_Framework_TestCase
      * Get parser.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Parser\JsonParser
+     * @return \LittlePolarApps\PhantomJs\Parser\JsonParser
      */
     protected function getParser()
     {
@@ -103,7 +103,7 @@ class ProcedureFactoryTest extends \PHPUnit_Framework_TestCase
      * @access protected
      * @param  string                            $cacheDir  (default: '')
      * @param  string                            $extension (default: 'proc')
-     * @return \Lpa\PhantomJs\Cache\FileCache
+     * @return \LittlePolarApps\PhantomJs\Cache\FileCache
      */
     protected function getCache($cacheDir = '', $extension = 'proc')
     {
@@ -116,7 +116,7 @@ class ProcedureFactoryTest extends \PHPUnit_Framework_TestCase
      * Get template renderer.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Template\TemplateRenderer
+     * @return \LittlePolarApps\PhantomJs\Template\TemplateRenderer
      */
     protected function getRenderer()
     {

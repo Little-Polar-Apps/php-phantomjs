@@ -7,14 +7,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Lpa\PhantomJs\Http;
+namespace LittlePolarApps\PhantomJs\Http;
 
-use Lpa\PhantomJs\Exception\NotWritableException;
+use LittlePolarApps\PhantomJs\Exception\NotWritableException;
 
 /**
  * PHP PhantomJs.
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class CaptureRequest extends AbstractRequest
     implements CaptureRequestInterface
@@ -82,7 +82,7 @@ class CaptureRequest extends AbstractRequest
      * @param string $method  (default: RequestInterface::METHOD_GET)
      * @param int    $timeout (default: 5000)
      *
-     * @return \Lpa\PhantomJs\Http\CaptureRequest
+     * @return \LittlePolarApps\PhantomJs\Http\CaptureRequest
      */
     public function __construct($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {
@@ -115,7 +115,7 @@ class CaptureRequest extends AbstractRequest
      *
      * @param string $type
      *
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setType($type)
     {
@@ -132,7 +132,7 @@ class CaptureRequest extends AbstractRequest
      * @param int $top    (default: 0)
      * @param int $left   (default: 0)
      *
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setCaptureDimensions($width, $height, $top = 0, $left = 0)
     {
@@ -189,9 +189,9 @@ class CaptureRequest extends AbstractRequest
      *
      * @param string $file
      *
-     * @throws \Lpa\PhantomJs\Exception\NotWritableException
+     * @throws \LittlePolarApps\PhantomJs\Exception\NotWritableException
      *
-     * @return \Lpa\PhantomJs\Http\CaptureRequest
+     * @return \LittlePolarApps\PhantomJs\Http\CaptureRequest
      */
     public function setOutputFile($file)
     {

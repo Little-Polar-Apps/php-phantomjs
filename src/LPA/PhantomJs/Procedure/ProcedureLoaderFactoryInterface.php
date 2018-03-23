@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Lpa\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 interface ProcedureLoaderFactoryInterface
 {
@@ -21,7 +21,7 @@ interface ProcedureLoaderFactoryInterface
      *
      * @access public
      * @param  string                                               $directory
-     * @return \Lpa\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface
      */
     public function createProcedureLoader($directory);
 }

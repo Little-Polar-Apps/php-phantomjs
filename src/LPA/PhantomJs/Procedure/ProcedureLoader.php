@@ -6,22 +6,22 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
 use Symfony\Component\Config\FileLocatorInterface;
-use Lpa\PhantomJs\Exception\NotExistsException;
+use LittlePolarApps\PhantomJs\Exception\NotExistsException;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ProcedureLoader implements ProcedureLoaderInterface
 {
     /**
      * Procedure factory.
      *
-     * @var \Lpa\PhantomJs\Procedure\ProcedureFactoryInterface
+     * @var \LittlePolarApps\PhantomJs\Procedure\ProcedureFactoryInterface
      * @access protected
      */
     protected $procedureFactory;
@@ -38,7 +38,7 @@ class ProcedureLoader implements ProcedureLoaderInterface
      * Internal constructor.
      *
      * @access public
-     * @param \Lpa\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
+     * @param \LittlePolarApps\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
      * @param \Symfony\Component\Config\FileLocatorInterface        $locator
      */
     public function __construct(ProcedureFactoryInterface $procedureFactory, FileLocatorInterface $locator)
@@ -52,7 +52,7 @@ class ProcedureLoader implements ProcedureLoaderInterface
      *
      * @access public
      * @param  string                                         $id
-     * @return \Lpa\PhantomJs\Procedure\ProcedureInterface
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureInterface
      */
     public function load($id)
     {
@@ -86,7 +86,7 @@ class ProcedureLoader implements ProcedureLoaderInterface
      * @param  string                                         $file
      * @return string
      * @throws \InvalidArgumentException
-     * @throws \Lpa\PhantomJs\Exception\NotExistsException
+     * @throws \LittlePolarApps\PhantomJs\Exception\NotExistsException
      */
     protected function loadFile($file)
     {

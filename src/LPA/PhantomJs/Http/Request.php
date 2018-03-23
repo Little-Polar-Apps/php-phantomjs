@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Lpa\PhantomJs\Http;
+namespace LittlePolarApps\PhantomJs\Http;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class Request extends AbstractRequest
 {
@@ -44,7 +44,7 @@ class Request extends AbstractRequest
      *
      * @access public
      * @param  string                                 $type
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setType($type)
     {

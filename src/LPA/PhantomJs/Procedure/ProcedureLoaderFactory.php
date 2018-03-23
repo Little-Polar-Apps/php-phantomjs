@@ -7,21 +7,21 @@
  * file that was distributed with this source code.
  */
 
-namespace Lpa\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
 use Symfony\Component\Config\FileLocator;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ProcedureLoaderFactory implements ProcedureLoaderFactoryInterface
 {
     /**
      * Procedure factory.
      *
-     * @var \Lpa\PhantomJs\Procedure\ProcedureFactoryInterface
+     * @var \LittlePolarApps\PhantomJs\Procedure\ProcedureFactoryInterface
      * @access protected
      */
     protected $procedureFactory;
@@ -30,7 +30,7 @@ class ProcedureLoaderFactory implements ProcedureLoaderFactoryInterface
      * Internal constructor.
      *
      * @access public
-     * @param \Lpa\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
+     * @param \LittlePolarApps\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
      */
     public function __construct(ProcedureFactoryInterface $procedureFactory)
     {
@@ -42,7 +42,7 @@ class ProcedureLoaderFactory implements ProcedureLoaderFactoryInterface
      *
      * @access public
      * @param  string                                      $directory
-     * @return \Lpa\PhantomJs\Procedure\ProcedureLoader
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureLoader
      */
     public function createProcedureLoader($directory)
     {

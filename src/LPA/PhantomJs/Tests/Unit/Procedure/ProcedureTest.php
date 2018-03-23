@@ -6,25 +6,25 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Tests\Unit\Procedure;
+namespace LittlePolarApps\PhantomJs\Tests\Unit\Procedure;
 
 use Twig_Environment;
 use Twig_Loader_String;
-use Lpa\PhantomJs\Engine;
-use Lpa\PhantomJs\Cache\FileCache;
-use Lpa\PhantomJs\Cache\CacheInterface;
-use Lpa\PhantomJs\Parser\JsonParser;
-use Lpa\PhantomJs\Parser\ParserInterface;
-use Lpa\PhantomJs\Template\TemplateRenderer;
-use Lpa\PhantomJs\Template\TemplateRendererInterface;
-use Lpa\PhantomJs\Procedure\Input;
-use Lpa\PhantomJs\Procedure\Output;
-use Lpa\PhantomJs\Procedure\Procedure;
+use LittlePolarApps\PhantomJs\Engine;
+use LittlePolarApps\PhantomJs\Cache\FileCache;
+use LittlePolarApps\PhantomJs\Cache\CacheInterface;
+use LittlePolarApps\PhantomJs\Parser\JsonParser;
+use LittlePolarApps\PhantomJs\Parser\ParserInterface;
+use LittlePolarApps\PhantomJs\Template\TemplateRenderer;
+use LittlePolarApps\PhantomJs\Template\TemplateRendererInterface;
+use LittlePolarApps\PhantomJs\Procedure\Input;
+use LittlePolarApps\PhantomJs\Procedure\Output;
+use LittlePolarApps\PhantomJs\Procedure\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ProcedureTest extends \PHPUnit_Framework_TestCase
 {
@@ -88,7 +88,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      */
     public function testNotWritableExceptionIsThrownIfProcedureScriptCannotBeWrittenToFile()
     {
-        $this->setExpectedException('\Lpa\PhantomJs\Exception\NotWritableException');
+        $this->setExpectedException('\LittlePolarApps\PhantomJs\Exception\NotWritableException');
 
         $engne    = $this->getEngine();
         $parser   = $this->getParser();
@@ -112,7 +112,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      */
     public function testProcedureFailedExceptionIsThrownIfProcedureCannotBeRun()
     {
-        $this->setExpectedException('\Lpa\PhantomJs\Exception\ProcedureFailedException');
+        $this->setExpectedException('\LittlePolarApps\PhantomJs\Exception\ProcedureFailedException');
 
         $parser   = $this->getParser();
         $cache    = $this->getCache();
@@ -136,11 +136,11 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * Get procedure instance.
      *
      * @access protected
-     * @param  \Lpa\PhantomJs\Engine                             $engine
-     * @param  \Lpa\PhantomJs\Parser\ParserInterface             $parser
-     * @param  \Lpa\PhantomJs\Cache\CacheInterface               $cacheHandler
-     * @param  \Lpa\PhantomJs\Template\TemplateRendererInterface $renderer
-     * @return \Lpa\PhantomJs\Procedure\Procedure
+     * @param  \LittlePolarApps\PhantomJs\Engine                             $engine
+     * @param  \LittlePolarApps\PhantomJs\Parser\ParserInterface             $parser
+     * @param  \LittlePolarApps\PhantomJs\Cache\CacheInterface               $cacheHandler
+     * @param  \LittlePolarApps\PhantomJs\Template\TemplateRendererInterface $renderer
+     * @return \LittlePolarApps\PhantomJs\Procedure\Procedure
      */
     protected function getProcedure(Engine $engine, ParserInterface $parser, CacheInterface $cacheHandler, TemplateRendererInterface $renderer)
     {
@@ -153,7 +153,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * Get parser.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Parser\JsonParser
+     * @return \LittlePolarApps\PhantomJs\Parser\JsonParser
      */
     protected function getParser()
     {
@@ -168,7 +168,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * @access protected
      * @param  string                            $cacheDir  (default: '')
      * @param  string                            $extension (default: 'proc')
-     * @return \Lpa\PhantomJs\Cache\FileCache
+     * @return \LittlePolarApps\PhantomJs\Cache\FileCache
      */
     protected function getCache($cacheDir = '', $extension = 'proc')
     {
@@ -181,7 +181,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * Get template renderer.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Template\TemplateRenderer
+     * @return \LittlePolarApps\PhantomJs\Template\TemplateRenderer
      */
     protected function getRenderer()
     {
@@ -198,7 +198,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * Get input
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Procedure\Input
+     * @return \LittlePolarApps\PhantomJs\Procedure\Input
      */
     protected function getInput()
     {
@@ -211,7 +211,7 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * Get output.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Procedure\Output
+     * @return \LittlePolarApps\PhantomJs\Procedure\Output
      */
     protected function getOutput()
     {
@@ -228,11 +228,11 @@ class ProcedureTest extends \PHPUnit_Framework_TestCase
      * Get engine
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Engine
+     * @return \LittlePolarApps\PhantomJs\Engine
      */
     protected function getEngine()
     {
-        $engine = $this->getMock('\Lpa\PhantomJs\Engine');
+        $engine = $this->getMock('\LittlePolarApps\PhantomJs\Engine');
 
         return $engine;
     }

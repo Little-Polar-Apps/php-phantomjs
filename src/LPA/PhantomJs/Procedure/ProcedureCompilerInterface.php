@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Lpa\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 interface ProcedureCompilerInterface
 {
@@ -20,8 +20,8 @@ interface ProcedureCompilerInterface
      * Compile partials into procedure.
      *
      * @access public
-     * @param \Lpa\PhantomJs\Procedure\ProcedureInterface $procedure
-     * @param \Lpa\PhantomJs\Procedure\InputInterface     $input
+     * @param \LittlePolarApps\PhantomJs\Procedure\ProcedureInterface $procedure
+     * @param \LittlePolarApps\PhantomJs\Procedure\InputInterface     $input
      */
     public function compile(ProcedureInterface $procedure, InputInterface $input);
 

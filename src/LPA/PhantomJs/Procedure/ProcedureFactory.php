@@ -7,24 +7,24 @@
  * file that was distributed with this source code.
  */
 
-namespace Lpa\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
-use Lpa\PhantomJs\Engine;
-use Lpa\PhantomJs\Cache\CacheInterface;
-use Lpa\PhantomJs\Parser\ParserInterface;
-use Lpa\PhantomJs\Template\TemplateRendererInterface;
+use LittlePolarApps\PhantomJs\Engine;
+use LittlePolarApps\PhantomJs\Cache\CacheInterface;
+use LittlePolarApps\PhantomJs\Parser\ParserInterface;
+use LittlePolarApps\PhantomJs\Template\TemplateRendererInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ProcedureFactory implements ProcedureFactoryInterface
 {
     /**
      * PhantomJS engine
      *
-     * @var \Lpa\PhantomJs\Engine
+     * @var \LittlePolarApps\PhantomJs\Engine
      * @access protected
      */
     protected $engine;
@@ -32,7 +32,7 @@ class ProcedureFactory implements ProcedureFactoryInterface
     /**
      * Parser.
      *
-     * @var \Lpa\PhantomJs\Parser\ParserInterface
+     * @var \LittlePolarApps\PhantomJs\Parser\ParserInterface
      * @access protected
      */
     protected $parser;
@@ -40,7 +40,7 @@ class ProcedureFactory implements ProcedureFactoryInterface
     /**
      * Cache handler.
      *
-     * @var \Lpa\PhantomJs\Cache\CacheInterface
+     * @var \LittlePolarApps\PhantomJs\Cache\CacheInterface
      * @access protected
      */
     protected $cacheHandler;
@@ -48,7 +48,7 @@ class ProcedureFactory implements ProcedureFactoryInterface
     /**
      * Template renderer.
      *
-     * @var \Lpa\PhantomJs\Template\TemplateRendererInterface
+     * @var \LittlePolarApps\PhantomJs\Template\TemplateRendererInterface
      * @access protected
      */
     protected $renderer;
@@ -57,10 +57,10 @@ class ProcedureFactory implements ProcedureFactoryInterface
      * Internal constructor.
      *
      * @access public
-     * @param \Lpa\PhantomJs\Engine                             $engine
-     * @param \Lpa\PhantomJs\Parser\ParserInterface             $parser
-     * @param \Lpa\PhantomJs\Cache\CacheInterface               $cacheHandler
-     * @param \Lpa\PhantomJs\Template\TemplateRendererInterface $renderer
+     * @param \LittlePolarApps\PhantomJs\Engine                             $engine
+     * @param \LittlePolarApps\PhantomJs\Parser\ParserInterface             $parser
+     * @param \LittlePolarApps\PhantomJs\Cache\CacheInterface               $cacheHandler
+     * @param \LittlePolarApps\PhantomJs\Template\TemplateRendererInterface $renderer
      */
     public function __construct(Engine $engine, ParserInterface $parser, CacheInterface $cacheHandler, TemplateRendererInterface $renderer)
     {
@@ -74,7 +74,7 @@ class ProcedureFactory implements ProcedureFactoryInterface
      * Create new procedure instance.
      *
      * @access public
-     * @return \Lpa\PhantomJs\Procedure\Procedure
+     * @return \LittlePolarApps\PhantomJs\Procedure\Procedure
      */
     public function createProcedure()
     {

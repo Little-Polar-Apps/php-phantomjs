@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Tests\Unit\Procedure;
+namespace LittlePolarApps\PhantomJs\Tests\Unit\Procedure;
 
-use Lpa\PhantomJs\Procedure\ChainProcedureLoader;
+use LittlePolarApps\PhantomJs\Procedure\ChainProcedureLoader;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ChainProcedureLoaderTest extends \PHPUnit_Framework_TestCase
 {
@@ -60,7 +60,7 @@ class ChainProcedureLoaderTest extends \PHPUnit_Framework_TestCase
 
         $chainProcedureLoader = $this->getChainProcedureLoader($procedureLoaders);
 
-        $this->assertInstanceOf('\Lpa\PhantomJs\Procedure\ProcedureInterface', $chainProcedureLoader->load('test'));
+        $this->assertInstanceOf('\LittlePolarApps\PhantomJs\Procedure\ProcedureInterface', $chainProcedureLoader->load('test'));
     }
 
     /**
@@ -132,7 +132,7 @@ class ChainProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      *
      * @access protected
      * @param  array                                            $procedureLoaders
-     * @return \Lpa\PhantomJs\Procedure\ChainProcedureLoader
+     * @return \LittlePolarApps\PhantomJs\Procedure\ChainProcedureLoader
      */
     protected function getChainProcedureLoader(array $procedureLoaders)
     {
@@ -149,11 +149,11 @@ class ChainProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      * Get procedure loader.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface
      */
     protected function getProcedureLoader()
     {
-        $procedureLoader = $this->getMock('\Lpa\PhantomJs\Procedure\ProcedureLoaderInterface');
+        $procedureLoader = $this->getMock('\LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface');
 
         return $procedureLoader;
     }
@@ -162,11 +162,11 @@ class ChainProcedureLoaderTest extends \PHPUnit_Framework_TestCase
      * Get procedure.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Procedure\ProcedureInterface
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureInterface
      */
     protected function getProcedure()
     {
-        $procedure = $this->getMock('\Lpa\PhantomJs\Procedure\ProcedureInterface');
+        $procedure = $this->getMock('\LittlePolarApps\PhantomJs\Procedure\ProcedureInterface');
 
         return $procedure;
     }

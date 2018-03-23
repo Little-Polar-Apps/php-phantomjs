@@ -6,16 +6,16 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Tests\Integration;
+namespace LittlePolarApps\PhantomJs\Tests\Integration;
 
-use Lpa\PhantomJs\Test\TestCase;
-use Lpa\PhantomJs\Client;
-use Lpa\PhantomJs\DependencyInjection\ServiceContainer;
+use LittlePolarApps\PhantomJs\Test\TestCase;
+use LittlePolarApps\PhantomJs\Client;
+use LittlePolarApps\PhantomJs\DependencyInjection\ServiceContainer;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ClientTest extends TestCase
 {
@@ -119,7 +119,7 @@ EOF;
      */
     public function testSyntaxExceptionIsThrownIfRequestProcedureContainsSyntaxError()
     {
-        $this->setExpectedException('\Lpa\PhantomJs\Exception\SyntaxException');
+        $this->setExpectedException('\LittlePolarApps\PhantomJs\Exception\SyntaxException');
 
         $content = 'TEST_PROCEDURE';
 
@@ -157,7 +157,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
 
         $client->send($request, $response);
 
@@ -179,7 +179,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
         $request->setRequestData(array(
             'test1' => 'http://test.com',
             'test2' => 'A string with an \' ) / # some other invalid [ characters.'
@@ -205,7 +205,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
 
         $client->send($request, $response);
 
@@ -226,7 +226,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
         $request->addSetting('userAgent', 'PhantomJS TEST');
 
         $client->send($request, $response);
@@ -248,8 +248,8 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
-        $request->addCookie('test_cookie', 'TESTING_COOKIES', '/', '.lpa.kiwi');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
+        $request->addCookie('test_cookie', 'TESTING_COOKIES', '/', '.little-polar-apps.kiwi');
 
         $client->send($request, $response);
 
@@ -277,12 +277,12 @@ EOF;
         $expireAt = strtotime('16-Nov-2020 00:00:00');
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
-        $request->addCookie('test_cookie', 'TESTING_COOKIES', '/', '.lpa.kiwi', true, false, ($expireAt * 1000));
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
+        $request->addCookie('test_cookie', 'TESTING_COOKIES', '/', '.little-polar-apps.kiwi', true, false, ($expireAt * 1000));
 
         $client->send($request, $response);
 
-        $this->assertContains('test_cookie=TESTING_COOKIES; HttpOnly; expires=Mon, 16-Nov-2020 00:00:00 GMT; domain=.lpa.kiwi; path=/)', file_get_contents($file));
+        $this->assertContains('test_cookie=TESTING_COOKIES; HttpOnly; expires=Mon, 16-Nov-2020 00:00:00 GMT; domain=.little-polar-apps.kiwi; path=/)', file_get_contents($file));
     }
 
     /**
@@ -306,19 +306,19 @@ EOF;
         $expireAt = strtotime('16-Nov-2020 00:00:00');
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
-        $request->addCookie('test_cookie', 'TESTING_COOKIES', '/', '.lpa.kiwi', true, false, ($expireAt * 1000));
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
+        $request->addCookie('test_cookie', 'TESTING_COOKIES', '/', '.little-polar-apps.kiwi', true, false, ($expireAt * 1000));
 
         $client->send($request, $response);
 
         $request = $client->getMessageFactory()->createRequest();
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
         $request->deleteCookie('test_cookie');
 
         $client->send($request, $response);
 
-        $this->assertNotContains('test_cookie=TESTING_COOKIES; HttpOnly; expires=Mon, 16-Nov-2020 00:00:00 GMT; domain=.lpa.kiwi; path=/)', file_get_contents($file));
+        $this->assertNotContains('test_cookie=TESTING_COOKIES; HttpOnly; expires=Mon, 16-Nov-2020 00:00:00 GMT; domain=.little-polar-apps.kiwi; path=/)', file_get_contents($file));
     }
 
     /**
@@ -342,21 +342,21 @@ EOF;
         $expireAt = strtotime('16-Nov-2020 00:00:00');
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
-        $request->addCookie('test_cookie_1', 'TESTING_COOKIES_1', '/', '.lpa.kiwi', true, false, ($expireAt * 1000));
-        $request->addCookie('test_cookie_2', 'TESTING_COOKIES_2', '/', '.lpa.kiwi', true, false, ($expireAt * 1000));
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
+        $request->addCookie('test_cookie_1', 'TESTING_COOKIES_1', '/', '.little-polar-apps.kiwi', true, false, ($expireAt * 1000));
+        $request->addCookie('test_cookie_2', 'TESTING_COOKIES_2', '/', '.little-polar-apps.kiwi', true, false, ($expireAt * 1000));
 
         $client->send($request, $response);
 
         $request = $client->getMessageFactory()->createRequest();
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
         $request->deleteCookie('*');
 
         $client->send($request, $response);
 
-        $this->assertNotContains('test_cookie_1=TESTING_COOKIES_1; HttpOnly; expires=Mon, 16-Nov-2020 00:00:00 GMT; domain=.lpa.kiwi; path=/)', file_get_contents($file));
-        $this->assertNotContains('test_cookie_2=TESTING_COOKIES_2; HttpOnly; expires=Mon, 16-Nov-2020 00:00:00 GMT; domain=.lpa.kiwi; path=/)', file_get_contents($file));
+        $this->assertNotContains('test_cookie_1=TESTING_COOKIES_1; HttpOnly; expires=Mon, 16-Nov-2020 00:00:00 GMT; domain=.little-polar-apps.kiwi; path=/)', file_get_contents($file));
+        $this->assertNotContains('test_cookie_2=TESTING_COOKIES_2; HttpOnly; expires=Mon, 16-Nov-2020 00:00:00 GMT; domain=.little-polar-apps.kiwi; path=/)', file_get_contents($file));
     }
 
 
@@ -377,14 +377,14 @@ EOF;
         $expireAt = strtotime('16-Nov-2020 00:00:00');
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
-        $request->addCookie('test_cookie', 'TESTING_COOKIES', '/', '.lpa.kiwi', true, false, ($expireAt * 1000));
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
+        $request->addCookie('test_cookie', 'TESTING_COOKIES', '/', '.little-polar-apps.kiwi', true, false, ($expireAt * 1000));
 
         $client->send($request, $response);
 
         $cookies = $response->getCookies();
         $this->assertEquals(array(
-            'domain' => '.lpa.kiwi',
+            'domain' => '.little-polar-apps.kiwi',
             'expires' => 'Mon, 16 Nov 2020 00:00:00 GMT',
             'expiry' => '1605484800',
             'httponly' => true,
@@ -410,7 +410,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-console-error.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-console-error.php');
 
         $client->send($request, $response);
 
@@ -435,7 +435,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-console-error.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-console-error.php');
 
         $client->send($request, $response);
 
@@ -458,7 +458,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-console-error.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-console-error.php');
 
         $client->send($request, $response);
 
@@ -501,7 +501,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('POST');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-post.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-post.php');
         $request->setRequestData(array(
             'test1' => 'http://test.com',
             'test2' => 'A string with an \' ) / # some other invalid [ characters.'
@@ -531,7 +531,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-capture.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
 
         $client->send($request, $response);
@@ -560,7 +560,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-capture.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
         $request->setCaptureDimensions($width, $height);
 
@@ -590,7 +590,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-capture.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
 
         $client->send($request, $response);
@@ -619,7 +619,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-capture.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
         $request->setPaperSize(sprintf('%scm', $width), sprintf('%scm', $height));
         $request->setMargin('0cm');
@@ -653,7 +653,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-capture.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
         $request->setFormat('A4');
         $request->setMargin('0cm');
@@ -687,7 +687,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-capture.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
         $request->setFormat('A4');
         $request->setOrientation('landscape');
@@ -722,7 +722,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-capture.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
         $request->setFormat('A4');
         $request->setOrientation('landscape');
@@ -758,7 +758,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-capture.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
         $request->setFormat('A4');
         $request->setOrientation('landscape');
@@ -795,7 +795,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
         $request->setViewportsize($width, $height);
 
         $client->send($request, $response);
@@ -826,7 +826,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
         $request->setViewportsize($width, $height);
 
         $client->send($request, $response);
@@ -855,7 +855,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
         $request->setDelay($delay);
 
         $client->send($request, $response);
@@ -884,7 +884,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
         $request->setDelay($delay);
 
         $client->send($request, $response);
@@ -913,7 +913,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
         $request->setDelay($delay);
 
         $client->send($request, $response);
@@ -946,7 +946,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-capture.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-capture.php');
         $request->setDelay($delay);
 
         $client->send($request, $response);
@@ -975,7 +975,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-capture.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-capture.php');
         $request->setDelay($delay);
 
         $client->send($request, $response);
@@ -1004,7 +1004,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-capture.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-capture.php');
         $request->setDelay($delay);
 
         $client->send($request, $response);
@@ -1036,7 +1036,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-lazy.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-lazy.php');
         $request->setTimeout(5000);
 
         $client->send($request, $response);
@@ -1061,7 +1061,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-lazy.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-lazy.php');
         $request->setTimeout(1000);
 
         $client->send($request, $response);
@@ -1085,7 +1085,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-default.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-default.php');
 
         $client->send($request, $response);
 
@@ -1110,7 +1110,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://www.lpa.kiwi/tests/test-capture.php');
+        $request->setUrl('http://www.little-polar-apps.kiwi/tests/test-capture.php');
         $request->setBodyStyles(array('backgroundColor' => 'red'));
         $request->setOutputFile($file);
 
@@ -1126,7 +1126,7 @@ EOF;
     /**
      * Get client instance.
      *
-     * @return \Lpa\PhantomJs\Client
+     * @return \LittlePolarApps\PhantomJs\Client
      */
     protected function getClient()
     {

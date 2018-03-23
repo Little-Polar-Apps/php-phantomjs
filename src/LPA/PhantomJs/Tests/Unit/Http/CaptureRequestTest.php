@@ -6,15 +6,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Tests\Unit\Http;
+namespace LittlePolarApps\PhantomJs\Tests\Unit\Http;
 
-use Lpa\PhantomJs\Http\CaptureRequest;
-use Lpa\PhantomJs\Http\RequestInterface;
+use LittlePolarApps\PhantomJs\Http\CaptureRequest;
+use LittlePolarApps\PhantomJs\Http\RequestInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class CaptureRequestTest extends \PHPUnit_Framework_TestCase
 {
@@ -104,7 +104,7 @@ class CaptureRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidMethodIsThrownIfMethodIsInvalid()
     {
-        $this->setExpectedException('\Lpa\PhantomJs\Exception\InvalidMethodException');
+        $this->setExpectedException('\LittlePolarApps\PhantomJs\Exception\InvalidMethodException');
 
         $captureRequest = $this->getCaptureRequest();
         $captureRequest->setMethod('INVALID_METHOD');
@@ -473,7 +473,7 @@ class CaptureRequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testNotWritableExceptonIsThrownIfOutputPathIsNotWritable()
     {
-        $this->setExpectedException('\Lpa\PhantomJs\Exception\NotWritableException');
+        $this->setExpectedException('\LittlePolarApps\PhantomJs\Exception\NotWritableException');
 
         $invalidPath = '/invalid/path';
 
@@ -542,7 +542,7 @@ class CaptureRequestTest extends \PHPUnit_Framework_TestCase
      * @param  string                                $url     (default: null)
      * @param  string                                $method  (default: RequestInterface::METHOD_GET)
      * @param  int                                   $timeout (default: 5000)
-     * @return \Lpa\PhantomJs\Http\CaptureRequest
+     * @return \LittlePolarApps\PhantomJs\Http\CaptureRequest
      */
     protected function getCaptureRequest($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {

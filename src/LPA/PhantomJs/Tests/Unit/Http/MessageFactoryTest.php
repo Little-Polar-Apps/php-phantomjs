@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Tests\Unit\Http;
+namespace LittlePolarApps\PhantomJs\Tests\Unit\Http;
 
-use Lpa\PhantomJs\Http\MessageFactory;
+use LittlePolarApps\PhantomJs\Http\MessageFactory;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class MessageFactoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -30,7 +30,7 @@ class MessageFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testFactoryMethodCreatesMessageFactory()
     {
-        $this->assertInstanceOf('\Lpa\PhantomJs\Http\MessageFactory', MessageFactory::getInstance());
+        $this->assertInstanceOf('\LittlePolarApps\PhantomJs\Http\MessageFactory', MessageFactory::getInstance());
     }
 
     /**
@@ -43,7 +43,7 @@ class MessageFactoryTest extends \PHPUnit_Framework_TestCase
     {
         $messageFactory = $this->getMessageFactory();
 
-        $this->assertInstanceOf('\Lpa\PhantomJs\Http\Request', $messageFactory->createRequest());
+        $this->assertInstanceOf('\LittlePolarApps\PhantomJs\Http\Request', $messageFactory->createRequest());
     }
 
     /**
@@ -104,7 +104,7 @@ class MessageFactoryTest extends \PHPUnit_Framework_TestCase
     {
         $messageFactory = $this->getMessageFactory();
 
-        $this->assertInstanceOf('\Lpa\PhantomJs\Http\CaptureRequest', $messageFactory->createCaptureRequest());
+        $this->assertInstanceOf('\LittlePolarApps\PhantomJs\Http\CaptureRequest', $messageFactory->createCaptureRequest());
     }
 
     /**
@@ -166,7 +166,7 @@ class MessageFactoryTest extends \PHPUnit_Framework_TestCase
     {
         $messageFactory = $this->getMessageFactory();
 
-        $this->assertInstanceOf('\Lpa\PhantomJs\Http\Response', $messageFactory->createResponse());
+        $this->assertInstanceOf('\LittlePolarApps\PhantomJs\Http\Response', $messageFactory->createResponse());
     }
 
 /** +++++++++++++++++++++++++++++++++++ **/
@@ -177,7 +177,7 @@ class MessageFactoryTest extends \PHPUnit_Framework_TestCase
      * Get message factory instance.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Http\MessageFactory
+     * @return \LittlePolarApps\PhantomJs\Http\MessageFactory
      */
     protected function getMessageFactory()
     {

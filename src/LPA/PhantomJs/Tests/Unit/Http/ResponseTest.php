@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Tests\Unit\Http;
+namespace LittlePolarApps\PhantomJs\Tests\Unit\Http;
 
-use Lpa\PhantomJs\Http\Response;
+use LittlePolarApps\PhantomJs\Http\Response;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ResponseTest extends \PHPUnit_Framework_TestCase
 {
@@ -376,7 +376,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
      */
     public function testCookiesCanBeImported()
     {
-        $cookie = 'cookie=TESTING; HttpOnly; expires=Mon, 16-Nov-2020 00:00:00 GMT; domain=.lpa.kiwi; path=/';
+        $cookie = 'cookie=TESTING; HttpOnly; expires=Mon, 16-Nov-2020 00:00:00 GMT; domain=.little-polar-apps.kiwi; path=/';
         $data = array(
             'cookies' => array($cookie)
         );
@@ -395,7 +395,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
      * Get response instance.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Http\Response
+     * @return \LittlePolarApps\PhantomJs\Http\Response
      */
     protected function getResponse()
     {

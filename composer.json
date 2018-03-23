@@ -1,5 +1,5 @@
 {
-    "name": "lpa/php-phantomjs",
+    "name": "little-polar-apps/php-phantomjs",
     "description": "A PHP wrapper for loading pages through PhantomJS",
     "keywords": ["PhantomJS", "Testing", "Headless Browser"],
 	"type": "library",
@@ -7,8 +7,8 @@
     "authors": [
         {
             "name": "Jonny Wenmoth",
-            "email": "contact@lpa.me",
-            "homepage": "http://lpa.me/"
+            "email": "contact@little-polar-apps.me",
+            "homepage": "http://little-polar-apps.me/"
         }
     ],
     "minimum-stability": "stable",
@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Lpa\\PhantomJs\\": "src"
+            "LittlePolarApps\\PhantomJs\\": "src"
         },
 		"classmap": ["src/"]
     },

@@ -6,15 +6,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Tests\Unit\Procedure;
+namespace LittlePolarApps\PhantomJs\Tests\Unit\Procedure;
 
-use Lpa\PhantomJs\Procedure\ProcedureFactoryInterface;
-use Lpa\PhantomJs\Procedure\ProcedureLoaderFactory;
+use LittlePolarApps\PhantomJs\Procedure\ProcedureFactoryInterface;
+use LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderFactory;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ProcedureLoaderFactoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -60,7 +60,7 @@ class ProcedureLoaderFactoryTest extends \PHPUnit_Framework_TestCase
         $procedureLoaderFactory = $this->getProcedureLoaderFactory($procedureFactory);
         $procedureLoader = $procedureLoaderFactory->createProcedureLoader($this->directory);
 
-        $this->assertInstanceOf('\Lpa\PhantomJs\Procedure\ProcedureLoaderInterface', $procedureLoader);
+        $this->assertInstanceOf('\LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface', $procedureLoader);
     }
 
 /** +++++++++++++++++++++++++++++++++++ **/
@@ -71,8 +71,8 @@ class ProcedureLoaderFactoryTest extends \PHPUnit_Framework_TestCase
      * Get procedure loader factory instance.
      *
      * @access public
-     * @param  \Lpa\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
-     * @return \Lpa\PhantomJs\Procedure\ProcedureLoaderFactory
+     * @param  \LittlePolarApps\PhantomJs\Procedure\ProcedureFactoryInterface $procedureFactory
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderFactory
      */
     protected function getProcedureLoaderFactory(ProcedureFactoryInterface $procedureFactory)
     {
@@ -89,11 +89,11 @@ class ProcedureLoaderFactoryTest extends \PHPUnit_Framework_TestCase
      * Get procedure factory.
      *
      * @access protected
-     * @return \Lpa\PhantomJs\Procedure\ProcedureFactoryInterface
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureFactoryInterface
      */
     protected function getProcedureFactory()
     {
-        $procedureFactory = $this->getMock('\Lpa\PhantomJs\Procedure\ProcedureFactoryInterface');
+        $procedureFactory = $this->getMock('\LittlePolarApps\PhantomJs\Procedure\ProcedureFactoryInterface');
 
         return $procedureFactory;
     }

@@ -7,15 +7,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Lpa\PhantomJs\Http;
+namespace LittlePolarApps\PhantomJs\Http;
 
-use Lpa\PhantomJs\Exception\InvalidMethodException;
-use Lpa\PhantomJs\Procedure\InputInterface;
+use LittlePolarApps\PhantomJs\Exception\InvalidMethodException;
+use LittlePolarApps\PhantomJs\Procedure\InputInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 abstract class AbstractRequest
     implements RequestInterface, InputInterface
@@ -144,13 +144,13 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  string                                             $method
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
-     * @throws \Lpa\PhantomJs\Exception\InvalidMethodException
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
+     * @throws \LittlePolarApps\PhantomJs\Exception\InvalidMethodException
      */
     public function setMethod($method)
     {
         $method     = strtoupper($method);
-        $reflection = new \ReflectionClass('\Lpa\PhantomJs\Http\RequestInterface');
+        $reflection = new \ReflectionClass('\LittlePolarApps\PhantomJs\Http\RequestInterface');
 
         if (!$reflection->hasConstant('METHOD_' . $method)) {
             throw new InvalidMethodException(sprintf('Invalid method provided: %s', $method));
@@ -177,7 +177,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  int                                    $timeout
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setTimeout($timeout)
     {
@@ -206,7 +206,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  int                                    $delay
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setDelay($delay)
     {
@@ -269,7 +269,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  string                                 $url
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setUrl($url)
     {
@@ -324,7 +324,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  array                                  $data
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setRequestData(array $data)
     {
@@ -354,7 +354,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  array                                  $headers
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setHeaders(array $headers)
     {
@@ -367,7 +367,7 @@ abstract class AbstractRequest
      * @access public
      * @param  string                                 $header
      * @param  string                                 $value
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function addHeader($header, $value)
     {
@@ -381,7 +381,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  array                                  $headers
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function addHeaders(array $headers)
     {
@@ -412,7 +412,7 @@ abstract class AbstractRequest
      * @access public
      * @param  string                                 $setting
      * @param  string                                 $value
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function addSetting($setting, $value)
     {
@@ -443,7 +443,7 @@ abstract class AbstractRequest
      * @param  bool                                   $httpOnly (default: true)
      * @param  bool                                   $secure   (default: false)
      * @param  int                                    $expires  (default: null)
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function addCookie($name, $value, $path, $domain, $httpOnly = true, $secure = false, $expires = null)
     {
@@ -469,7 +469,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  string                                 $name
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function deleteCookie($name)
     {
@@ -494,7 +494,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  array                                  $styles
-     * @return \Lpa\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setBodyStyles(array $styles)
     {

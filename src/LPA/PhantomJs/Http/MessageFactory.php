@@ -6,19 +6,19 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Lpa\PhantomJs\Http;
+namespace LittlePolarApps\PhantomJs\Http;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@lpa.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class MessageFactory implements MessageFactoryInterface
 {
     /**
      * Client instance
      *
-     * @var \Lpa\PhantomJs\Http\MessageFactory
+     * @var \LittlePolarApps\PhantomJs\Http\MessageFactory
      * @access private
      */
     private static $instance;
@@ -27,7 +27,7 @@ class MessageFactory implements MessageFactoryInterface
      * Get singleton instance.
      *
      * @access public
-     * @return \Lpa\PhantomJs\Http\MessageFactory
+     * @return \LittlePolarApps\PhantomJs\Http\MessageFactory
      */
     public static function getInstance()
     {
@@ -45,7 +45,7 @@ class MessageFactory implements MessageFactoryInterface
      * @param  string                         $url
      * @param  string                         $method
      * @param  int                            $timeout
-     * @return \Lpa\PhantomJs\Http\Request
+     * @return \LittlePolarApps\PhantomJs\Http\Request
      */
     public function createRequest($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {
@@ -59,7 +59,7 @@ class MessageFactory implements MessageFactoryInterface
      * @param  string                                $url
      * @param  string                                $method
      * @param  int                                   $timeout
-     * @return \Lpa\PhantomJs\Http\CaptureRequest
+     * @return \LittlePolarApps\PhantomJs\Http\CaptureRequest
      */
     public function createCaptureRequest($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {
@@ -73,7 +73,7 @@ class MessageFactory implements MessageFactoryInterface
      * @param  string                            $url
      * @param  string                            $method
      * @param  int                               $timeout
-     * @return \Lpa\PhantomJs\Http\PdfRequest
+     * @return \LittlePolarApps\PhantomJs\Http\PdfRequest
      */
     public function createPdfRequest($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {
@@ -84,7 +84,7 @@ class MessageFactory implements MessageFactoryInterface
      * Create response instance.
      *
      * @access public
-     * @return \Lpa\PhantomJs\Http\Response
+     * @return \LittlePolarApps\PhantomJs\Http\Response
      */
     public function createResponse()
     {
