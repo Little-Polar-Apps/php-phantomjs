@@ -1,5 +1,5 @@
 {
-    "name": "jonnyw/php-phantomjs",
+    "name": "lpa/php-phantomjs",
     "description": "A PHP wrapper for loading pages through PhantomJS",
     "keywords": ["PhantomJS", "Testing", "Headless Browser"],
 	"type": "library",
@@ -7,8 +7,8 @@
     "authors": [
         {
             "name": "Jonny Wenmoth",
-            "email": "contact@jonnyw.me",
-            "homepage": "http://jonnyw.me/"
+            "email": "contact@lpa.me",
+            "homepage": "http://lpa.me/"
         }
     ],
     "minimum-stability": "stable",
@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-0": {
-            "JonnyW\\PhantomJs\\": "src"
+            "Lpa\\PhantomJs\\": "src"
         },
 		"classmap": ["src/"]
     },
