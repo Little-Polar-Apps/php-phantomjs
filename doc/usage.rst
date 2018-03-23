@@ -22,7 +22,7 @@ A basic GET request:
 .. code:: php
 
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         
@@ -44,7 +44,7 @@ creating a new request instance through the message factory:
 .. code:: php
 
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         
@@ -65,7 +65,7 @@ A basic POST request:
 .. code:: php
 
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         
@@ -102,7 +102,7 @@ through the message factory:
 .. code:: php
 
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         
@@ -113,7 +113,7 @@ Or on the request instance itself:
 .. code:: php
 
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         
@@ -162,7 +162,7 @@ to:
 .. code:: php
 
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         
@@ -184,7 +184,7 @@ capture:
 .. code:: php
 
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         
@@ -212,7 +212,7 @@ You can easily set the viewport size for a request:
 
         <?php
     
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         
@@ -235,7 +235,7 @@ custom timeout period (in milliseconds) for each request:
 .. code:: php
 
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         
@@ -258,7 +258,7 @@ you can set a page render delay (in seconds) for the request:
 .. code:: php
 
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         
@@ -283,7 +283,7 @@ in via the client before a request:
 .. code:: php
 
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         $client->addOption('--load-images=true');
@@ -300,7 +300,7 @@ multiple PhantomJS options:
 .. code:: php
 
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         $client->addOption('--config=/path/to/config.json');

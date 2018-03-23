@@ -7,22 +7,22 @@
  * file that was distributed with this source code.
  */
 
-namespace JonnyW\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
-use JonnyW\PhantomJs\Cache\CacheInterface;
-use JonnyW\PhantomJs\Template\TemplateRendererInterface;
+use LittlePolarApps\PhantomJs\Cache\CacheInterface;
+use LittlePolarApps\PhantomJs\Template\TemplateRendererInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ProcedureCompiler implements ProcedureCompilerInterface
 {
     /**
      * Procedure loader
      *
-     * @var \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @var \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface
      * @access protected
      */
     protected $procedureLoader;
@@ -30,7 +30,7 @@ class ProcedureCompiler implements ProcedureCompilerInterface
     /**
      * Procedure validator
      *
-     * @var \JonnyW\PhantomJs\Procedure\ProcedureValidatorInterface
+     * @var \LittlePolarApps\PhantomJs\Procedure\ProcedureValidatorInterface
      * @access protected
      */
     protected $procedureValidator;
@@ -38,7 +38,7 @@ class ProcedureCompiler implements ProcedureCompilerInterface
     /**
      * Cache handler
      *
-     * @var \JonnyW\PhantomJs\Cache\CacheInterface
+     * @var \LittlePolarApps\PhantomJs\Cache\CacheInterface
      * @access protected
      */
     protected $cacheHandler;
@@ -46,7 +46,7 @@ class ProcedureCompiler implements ProcedureCompilerInterface
     /**
      * Renderer
      *
-     * @var \JonnyW\PhantomJs\Template\TemplateRendererInterface
+     * @var \LittlePolarApps\PhantomJs\Template\TemplateRendererInterface
      * @access protected
      */
     protected $renderer;
@@ -63,10 +63,10 @@ class ProcedureCompiler implements ProcedureCompilerInterface
      * Internal constructor
      *
      * @access public
-     * @param \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface    $procedureLoader
-     * @param \JonnyW\PhantomJs\Procedure\ProcedureValidatorInterface $procedureValidator
-     * @param \JonnyW\PhantomJs\Cache\CacheInterface                  $cacheHandler
-     * @param \JonnyW\PhantomJs\Template\TemplateRendererInterface    $renderer
+     * @param \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface    $procedureLoader
+     * @param \LittlePolarApps\PhantomJs\Procedure\ProcedureValidatorInterface $procedureValidator
+     * @param \LittlePolarApps\PhantomJs\Cache\CacheInterface                  $cacheHandler
+     * @param \LittlePolarApps\PhantomJs\Template\TemplateRendererInterface    $renderer
      */
     public function __construct(ProcedureLoaderInterface $procedureLoader, ProcedureValidatorInterface $procedureValidator,
         CacheInterface $cacheHandler, TemplateRendererInterface $renderer)
@@ -82,8 +82,8 @@ class ProcedureCompiler implements ProcedureCompilerInterface
      * Compile partials into procedure.
      *
      * @access public
-     * @param  \JonnyW\PhantomJs\Procedure\ProcedureInterface $procedure
-     * @param  \JonnyW\PhantomJs\Procedure\InputInterface     $input
+     * @param  \LittlePolarApps\PhantomJs\Procedure\ProcedureInterface $procedure
+     * @param  \LittlePolarApps\PhantomJs\Procedure\InputInterface     $input
      * @return void
      */
     public function compile(ProcedureInterface $procedure, InputInterface $input)

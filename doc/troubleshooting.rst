@@ -83,7 +83,7 @@ request:
 
         <?php 
     
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
     
         $client = Client::getInstance();
         $client->setBinDir('/path/to/bin/dir');
@@ -146,7 +146,7 @@ PhantomJS client:
 
         <?php
     
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
     
         $client = Client::getInstance();
     
@@ -168,7 +168,7 @@ you are not getting a response.
 
         <?php
     
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
     
         $client = Client::getInstance();
         $client->debug(true); // Set debug flag
@@ -247,7 +247,7 @@ filename:
 
         <?php
     
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
     
         $client = Client::getInstance();
     
@@ -275,7 +275,7 @@ and y coordinates of where the capture should start from:
 
         <?php
     
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
     
         $client = Client::getInstance();
     
@@ -304,7 +304,7 @@ requests:
 
         <?php
     
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
     
         $client = Client::getInstance();
     
@@ -329,7 +329,7 @@ by the PHP PhantomJS library:
 
         <?php
     
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
     
         $client = Client::getInstance();
         $client->debug(true); // Set debug flag
@@ -348,7 +348,7 @@ from the URL you are calling, in the response object:
 
         <?php
     
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
     
         $client = Client::getInstance();
     

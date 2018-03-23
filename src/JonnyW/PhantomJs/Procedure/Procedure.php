@@ -6,26 +6,26 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
-use JonnyW\PhantomJs\Engine;
-use JonnyW\PhantomJs\Cache\CacheInterface;
-use JonnyW\PhantomJs\Parser\ParserInterface;
-use JonnyW\PhantomJs\Template\TemplateRendererInterface;
-use JonnyW\PhantomJs\Exception\NotWritableException;
-use JonnyW\PhantomJs\Exception\ProcedureFailedException;
+use LittlePolarApps\PhantomJs\Engine;
+use LittlePolarApps\PhantomJs\Cache\CacheInterface;
+use LittlePolarApps\PhantomJs\Parser\ParserInterface;
+use LittlePolarApps\PhantomJs\Template\TemplateRendererInterface;
+use LittlePolarApps\PhantomJs\Exception\NotWritableException;
+use LittlePolarApps\PhantomJs\Exception\ProcedureFailedException;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class Procedure implements ProcedureInterface
 {
     /**
      * PhantomJS engine
      *
-     * @var \JonnyW\PhantomJs\Engine
+     * @var \LittlePolarApps\PhantomJs\Engine
      * @access protected
      */
     protected $engine;
@@ -33,7 +33,7 @@ class Procedure implements ProcedureInterface
     /**
      * Parser instance.
      *
-     * @var \JonnyW\PhantomJs\Parser\ParserInterface
+     * @var \LittlePolarApps\PhantomJs\Parser\ParserInterface
      * @access protected
      */
     protected $parser;
@@ -41,7 +41,7 @@ class Procedure implements ProcedureInterface
     /**
      * Cache handler instance.
      *
-     * @var \JonnyW\PhantomJs\Cache\CacheInterface
+     * @var \LittlePolarApps\PhantomJs\Cache\CacheInterface
      * @access protected
      */
     protected $cacheHandler;
@@ -49,7 +49,7 @@ class Procedure implements ProcedureInterface
     /**
      * Template renderer.
      *
-     * @var \JonnyW\PhantomJs\Template\TemplateRendererInterface
+     * @var \LittlePolarApps\PhantomJs\Template\TemplateRendererInterface
      * @access protected
      */
     protected $renderer;
@@ -66,10 +66,10 @@ class Procedure implements ProcedureInterface
      * Internal constructor.
      *
      * @access public
-     * @param \JonnyW\PhantomJs\Engine                             $engine
-     * @param \JonnyW\PhantomJs\Parser\ParserInterface             $parser
-     * @param \JonnyW\PhantomJs\Cache\CacheInterface               $cacheHandler
-     * @param \JonnyW\PhantomJs\Template\TemplateRendererInterface $renderer
+     * @param \LittlePolarApps\PhantomJs\Engine                             $engine
+     * @param \LittlePolarApps\PhantomJs\Parser\ParserInterface             $parser
+     * @param \LittlePolarApps\PhantomJs\Cache\CacheInterface               $cacheHandler
+     * @param \LittlePolarApps\PhantomJs\Template\TemplateRendererInterface $renderer
      */
     public function __construct(Engine $engine, ParserInterface $parser, CacheInterface $cacheHandler, TemplateRendererInterface $renderer)
     {
@@ -83,10 +83,10 @@ class Procedure implements ProcedureInterface
      * Run procedure.
      *
      * @access public
-     * @param  \JonnyW\PhantomJs\Procedure\InputInterface           $input
-     * @param  \JonnyW\PhantomJs\Procedure\OutputInterface          $output
-     * @throws \JonnyW\PhantomJs\Exception\ProcedureFailedException
-     * @throws \JonnyW\PhantomJs\Exception\NotWritableException
+     * @param  \LittlePolarApps\PhantomJs\Procedure\InputInterface           $input
+     * @param  \LittlePolarApps\PhantomJs\Procedure\OutputInterface          $output
+     * @throws \LittlePolarApps\PhantomJs\Exception\ProcedureFailedException
+     * @throws \LittlePolarApps\PhantomJs\Exception\NotWritableException
      * @return void
      */
     public function run(InputInterface $input, OutputInterface $output)
@@ -143,7 +143,7 @@ class Procedure implements ProcedureInterface
      *
      * @access public
      * @param  string                                $template
-     * @return \JonnyW\PhantomJs\Procedure\Procedure
+     * @return \LittlePolarApps\PhantomJs\Procedure\Procedure
      */
     public function setTemplate($template)
     {
@@ -167,7 +167,7 @@ class Procedure implements ProcedureInterface
      * Compile procedure.
      *
      * @access public
-     * @param  \JonnyW\PhantomJs\Procedure\InputInterface $input
+     * @param  \LittlePolarApps\PhantomJs\Procedure\InputInterface $input
      * @return void
      */
     public function compile(InputInterface $input)

@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Tests\Unit\Procedure;
+namespace LittlePolarApps\PhantomJs\Tests\Unit\Procedure;
 
-use JonnyW\PhantomJs\Procedure\Output;
+use LittlePolarApps\PhantomJs\Procedure\Output;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class OutputTest extends \PHPUnit_Framework_TestCase
 {
@@ -77,7 +77,7 @@ class OutputTest extends \PHPUnit_Framework_TestCase
      * Get output.
      *
      * @access protected
-     * @return \JonnyW\PhantomJs\Procedure\Output
+     * @return \LittlePolarApps\PhantomJs\Procedure\Output
      */
     protected function getOutput()
     {

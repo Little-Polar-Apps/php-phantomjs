@@ -6,12 +6,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 interface ProcedureInterface
 {
@@ -19,8 +19,8 @@ interface ProcedureInterface
      * Run procedure.
      *
      * @access public
-     * @param \JonnyW\PhantomJs\Procedure\InputInterface  $input
-     * @param \JonnyW\PhantomJs\Procedure\OutputInterface $output
+     * @param \LittlePolarApps\PhantomJs\Procedure\InputInterface  $input
+     * @param \LittlePolarApps\PhantomJs\Procedure\OutputInterface $output
      */
     public function run(InputInterface $input, OutputInterface $output);
 
@@ -44,7 +44,7 @@ interface ProcedureInterface
      * Compile procedure.
      *
      * @access public
-     * @param  \JonnyW\PhantomJs\Procedure\InputInterface $input
+     * @param  \LittlePolarApps\PhantomJs\Procedure\InputInterface $input
      * @return string
      */
     public function compile(InputInterface $input);

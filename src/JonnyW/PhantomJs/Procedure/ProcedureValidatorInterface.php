@@ -6,12 +6,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 interface ProcedureValidatorInterface
 {
@@ -21,7 +21,7 @@ interface ProcedureValidatorInterface
      * @access public
      * @param  string                                                   $procedure
      * @return boolean
-     * @throws \JonnyW\PhantomJs\Exception\ProcedureValidationException
+     * @throws \LittlePolarApps\PhantomJs\Exception\ProcedureValidationException
      */
     public function validate($procedure);
 }

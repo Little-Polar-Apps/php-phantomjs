@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Tests\Unit\Cache;
+namespace LittlePolarApps\PhantomJs\Tests\Unit\Cache;
 
-use JonnyW\PhantomJs\Cache\FileCache;
+use LittlePolarApps\PhantomJs\Cache\FileCache;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class FileCacheTest extends \PHPUnit_Framework_TestCase
 {
@@ -74,7 +74,7 @@ class FileCacheTest extends \PHPUnit_Framework_TestCase
      */
     public function testNotWritableExceptionIsThrownIfFileCannotBeSavedDueToWritePermissions()
     {
-        $this->setExpectedException('\JonnyW\PhantomJs\Exception\NotWritableException');
+        $this->setExpectedException('\LittlePolarApps\PhantomJs\Exception\NotWritableException');
 
         $fileCache = $this->getFileCache('/This/Directory/Is/Not/Writable/', 'txt');
         $fileCache->save($this->filename, 'Test');
@@ -122,7 +122,7 @@ class FileCacheTest extends \PHPUnit_Framework_TestCase
      */
     public function testNotWritableExceptionIsThrownIfDirectoryPathIsNotWritable()
     {
-        $this->setExpectedException('\JonnyW\PhantomJs\Exception\NotWritableException');
+        $this->setExpectedException('\LittlePolarApps\PhantomJs\Exception\NotWritableException');
 
         $fileCache  = $this->getFileCache($this->directory, 'txt');
         $file       = $fileCache->save('/This/Directory/Is/Not/Writable/', 'Test');
@@ -156,7 +156,7 @@ class FileCacheTest extends \PHPUnit_Framework_TestCase
      */
     public function testNotExistsExceptionIsThrownIfWhenFetchingDataThatDoesntExist()
     {
-        $this->setExpectedException('\JonnyW\PhantomJs\Exception\NotExistsException');
+        $this->setExpectedException('\LittlePolarApps\PhantomJs\Exception\NotExistsException');
 
         $fileCache = $this->getFileCache('', 'txt');
 
@@ -228,7 +228,7 @@ class FileCacheTest extends \PHPUnit_Framework_TestCase
      *
      * @param  string                            $directory
      * @param  string                            $extension
-     * @return \JonnyW\PhantomJs\Cache\FileCache
+     * @return \LittlePolarApps\PhantomJs\Cache\FileCache
      */
     protected function getFileCache($directory, $extension)
     {

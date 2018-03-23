@@ -6,15 +6,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs;
+namespace LittlePolarApps\PhantomJs;
 
-use JonnyW\PhantomJs\Http\RequestInterface;
-use JonnyW\PhantomJs\Http\ResponseInterface;
+use LittlePolarApps\PhantomJs\Http\RequestInterface;
+use LittlePolarApps\PhantomJs\Http\ResponseInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 interface ClientInterface
 {
@@ -22,7 +22,7 @@ interface ClientInterface
      * Get singleton instance
      *
      * @access public
-     * @return \JonnyW\PhantomJs\ClientInterface
+     * @return \LittlePolarApps\PhantomJs\ClientInterface
      */
     public static function getInstance();
 
@@ -30,7 +30,7 @@ interface ClientInterface
      * Get engine instance.
      *
      * @access public
-     * @return \JonnyW\PhantomJs\Engine
+     * @return \LittlePolarApps\PhantomJs\Engine
      */
     public function getEngine();
 
@@ -38,7 +38,7 @@ interface ClientInterface
      * Get message factory instance
      *
      * @access public
-     * @return \JonnyW\PhantomJs\Http\MessageFactoryInterface
+     * @return \LittlePolarApps\PhantomJs\Http\MessageFactoryInterface
      */
     public function getMessageFactory();
 
@@ -46,7 +46,7 @@ interface ClientInterface
      * Get procedure loader instance
      *
      * @access public
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface
      */
     public function getProcedureLoader();
 
@@ -54,8 +54,8 @@ interface ClientInterface
      * Send request
      *
      * @access public
-     * @param \JonnyW\PhantomJs\Http\RequestInterface  $request
-     * @param \JonnyW\PhantomJs\Http\ResponseInterface $response
+     * @param \LittlePolarApps\PhantomJs\Http\RequestInterface  $request
+     * @param \LittlePolarApps\PhantomJs\Http\ResponseInterface $response
      */
     public function send(RequestInterface $request, ResponseInterface $response);
 

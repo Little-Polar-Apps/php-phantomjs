@@ -6,7 +6,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\DependencyInjection;
+namespace LittlePolarApps\PhantomJs\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -15,14 +15,14 @@ use Symfony\Component\Config\FileLocator;
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ServiceContainer extends ContainerBuilder
 {
     /**
      * Service container instance
      *
-     * @var \JonnyW\PhantomJs\DependencyInjection\ServiceContainer
+     * @var \LittlePolarApps\PhantomJs\DependencyInjection\ServiceContainer
      * @access private
      */
     private static $instance;
@@ -31,7 +31,7 @@ class ServiceContainer extends ContainerBuilder
      * Get singleton instance
      *
      * @access public
-     * @return \JonnyW\PhantomJs\Client
+     * @return \LittlePolarApps\PhantomJs\Client
      */
     public static function getInstance()
     {

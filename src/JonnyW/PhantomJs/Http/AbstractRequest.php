@@ -7,16 +7,16 @@
  * file that was distributed with this source code.
  */
 
-namespace JonnyW\PhantomJs\Http;
+namespace LittlePolarApps\PhantomJs\Http;
 
-use JonnyW\PhantomJs\Exception\InvalidUrlException;
-use JonnyW\PhantomJs\Exception\InvalidMethodException;
-use JonnyW\PhantomJs\Procedure\InputInterface;
+use LittlePolarApps\PhantomJs\Exception\InvalidUrlException;
+use LittlePolarApps\PhantomJs\Exception\InvalidMethodException;
+use LittlePolarApps\PhantomJs\Procedure\InputInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 abstract class AbstractRequest
     implements RequestInterface, InputInterface
@@ -114,13 +114,13 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  string                                             $method
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
-     * @throws \JonnyW\PhantomJs\Exception\InvalidMethodException
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
+     * @throws \LittlePolarApps\PhantomJs\Exception\InvalidMethodException
      */
     public function setMethod($method)
     {
         $method     = strtoupper($method);
-        $reflection = new \ReflectionClass('\JonnyW\PhantomJs\Http\RequestInterface');
+        $reflection = new \ReflectionClass('\LittlePolarApps\PhantomJs\Http\RequestInterface');
 
         if (!$reflection->hasConstant('METHOD_' . $method)) {
             throw new InvalidMethodException(sprintf('Invalid method provided: %s', $method));
@@ -147,7 +147,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  int                                    $timeout
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setTimeout($timeout)
     {
@@ -172,7 +172,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  int                                    $delay
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setDelay($delay)
     {
@@ -233,8 +233,8 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  string                                          $url
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
-     * @throws \JonnyW\PhantomJs\Exception\InvalidUrlException
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
+     * @throws \LittlePolarApps\PhantomJs\Exception\InvalidUrlException
      */
     public function setUrl($url)
     {
@@ -293,7 +293,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  array                                  $data
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setRequestData(array $data)
     {
@@ -323,7 +323,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  array                                  $headers
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setHeaders(array $headers)
     {
@@ -336,7 +336,7 @@ abstract class AbstractRequest
      * @access public
      * @param  string                                 $header
      * @param  string                                 $value
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function addHeader($header, $value)
     {
@@ -350,7 +350,7 @@ abstract class AbstractRequest
      *
      * @access public
      * @param  array                                  $headers
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function addHeaders(array $headers)
     {

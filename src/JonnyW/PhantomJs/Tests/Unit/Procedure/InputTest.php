@@ -6,14 +6,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Tests\Unit\Procedure;
+namespace LittlePolarApps\PhantomJs\Tests\Unit\Procedure;
 
-use JonnyW\PhantomJs\Procedure\Input;
+use LittlePolarApps\PhantomJs\Procedure\Input;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class InputTest extends \PHPUnit_Framework_TestCase
 {
@@ -44,7 +44,7 @@ class InputTest extends \PHPUnit_Framework_TestCase
      * Get input.
      *
      * @access protected
-     * @return \JonnyW\PhantomJs\Procedure\Input
+     * @return \LittlePolarApps\PhantomJs\Procedure\Input
      */
     protected function getInput()
     {

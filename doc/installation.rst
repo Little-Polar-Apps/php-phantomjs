@@ -26,7 +26,7 @@ Create a ``composer.json`` file in the root of your project:
 
         {
             "require": {
-                "jonnyw/php-phantomjs": "3.*"
+                "little-polar-apps/php-phantomjs": "3.*"
             },
             "config": {
                 "bin-dir": "bin"
@@ -65,7 +65,7 @@ executable file:
 
 .. code:: php
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
 
         $client = Client::getInstance();
         $client->setPhantomJs('/path/to/phantomjs');
@@ -99,7 +99,7 @@ Now you need to tell the client where to find your bin folder:
 
 .. code:: php
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
 
         $client = Client::getInstance();
         $client->setBinDir('/path/to/bin/dir');

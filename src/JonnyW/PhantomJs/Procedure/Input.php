@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace JonnyW\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class Input implements InputInterface
 {
@@ -41,7 +41,7 @@ class Input implements InputInterface
      * @access public
      * @param  string                            $name
      * @param  mixed                             $value
-     * @return \JonnyW\PhantomJs\Procedure\Input
+     * @return \LittlePolarApps\PhantomJs\Procedure\Input
      */
     public function set($name, $value)
     {

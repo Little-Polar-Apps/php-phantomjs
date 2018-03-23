@@ -6,15 +6,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Cache;
+namespace LittlePolarApps\PhantomJs\Cache;
 
-use JonnyW\PhantomJs\Exception\NotWritableException;
-use JonnyW\PhantomJs\Exception\NotExistsException;
+use LittlePolarApps\PhantomJs\Exception\NotWritableException;
+use LittlePolarApps\PhantomJs\Exception\NotExistsException;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class FileCache implements CacheInterface
 {
@@ -54,7 +54,7 @@ class FileCache implements CacheInterface
      * @param  string                                           $id
      * @param  string                                           $data
      * @return string
-     * @throws \JonnyW\PhantomJs\Exception\NotWritableException
+     * @throws \LittlePolarApps\PhantomJs\Exception\NotWritableException
      */
     public function save($id, $data)
     {
@@ -80,7 +80,7 @@ class FileCache implements CacheInterface
      * @access public
      * @param  string                                         $id
      * @return mixed|void
-     * @throws \JonnyW\PhantomJs\Exception\NotExistsException
+     * @throws \LittlePolarApps\PhantomJs\Exception\NotExistsException
      */
     public function fetch($id)
     {
@@ -164,7 +164,7 @@ class FileCache implements CacheInterface
      * @access protected
      * @param  string                                           $id
      * @return string
-     * @throws \JonnyW\PhantomJs\Exception\NotWritableException
+     * @throws \LittlePolarApps\PhantomJs\Exception\NotWritableException
      */
     protected function getFileName($id)
     {

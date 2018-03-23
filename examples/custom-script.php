@@ -2,8 +2,8 @@
 
 require '../vendor/autoload.php';
 
-use JonnyW\PhantomJs\Client;
-use JonnyW\PhantomJs\DependencyInjection\ServiceContainer;
+use LittlePolarApps\PhantomJs\Client;
+use LittlePolarApps\PhantomJs\DependencyInjection\ServiceContainer;
 
 // Create a file with a custom name 
 // e.g. custom_procedure.proc and save it 

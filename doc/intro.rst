@@ -59,7 +59,7 @@ Finally, install PHP PhantomJS from the root of your project:
 
 .. code:: shell
 
-    $ composer require "jonnyw/php-phantomjs:3.*"
+    $ composer require "little-polar-apps/php-phantomjs:3.*"
 
 If you would like to use another installation method or would like to
 see more detailed installation instructions, see the `installation <https://github.com/jonnnnyw/php-phantomjs/blob/master/doc/installation.rst>`__
@@ -75,17 +75,17 @@ page content:
 
     <?php
 
-    use JonnyW\PhantomJs\Client;
+    use LittlePolarApps\PhantomJs\Client;
 
     $client = Client::getInstance();
 
-    /** 
-     * @see JonnyW\PhantomJs\Message\Request 
+    /**
+     * @see LittlePolarApps\PhantomJs\Message\Request
      **/
     $request = $client->getMessageFactory()->createRequest('http://google.com', 'GET');
 
-    /** 
-     * @see JonnyW\PhantomJs\Message\Response 
+    /**
+     * @see LittlePolarApps\PhantomJs\Message\Response
      **/
     $response = $client->getMessageFactory()->createResponse();
 
@@ -104,18 +104,18 @@ And if you would like to save a screen capture to local disk:
 
     <?php
 
-    use JonnyW\PhantomJs\Client;
+    use LittlePolarApps\PhantomJs\Client;
 
     $client = Client::getInstance();
 
-    /** 
-     * @see JonnyW\PhantomJs\Message\CaptureRequest
+    /**
+     * @see LittlePolarApps\PhantomJs\Message\CaptureRequest
      **/
     $request = $client->getMessageFactory()->createCaptureRequest('http://google.com', 'GET');
     $request->setCaptureFile('/path/to/save/capture/file.jpg');
 
-    /** 
-     * @see JonnyW\PhantomJs\Message\Response 
+    /**
+     * @see LittlePolarApps\PhantomJs\Message\Response
      **/
     $response = $client->getMessageFactory()->createResponse();
 

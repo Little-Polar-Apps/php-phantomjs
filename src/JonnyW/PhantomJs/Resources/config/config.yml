@@ -14,42 +14,42 @@ parameters:
 ### ENGINE ###
 ##############
 
-    phantomjs.engine.class: JonnyW\PhantomJs\Engine
+    phantomjs.engine.class: LittlePolarApps\PhantomJs\Engine
 
 ##################
 ### PROCEDURES ###
 ##################
 
-    phantomjs.procedure.procedure_loader.class: JonnyW\PhantomJs\Procedure\ProcedureLoader
-    phantomjs.procedure.chain_loader.class: JonnyW\PhantomJs\Procedure\ChainProcedureLoader
-    phantomjs.procedure.procedure_factory.class: JonnyW\PhantomJs\Procedure\ProcedureFactory
-    phantomjs.procedure.procedure_loader_factory.class: JonnyW\PhantomJs\Procedure\ProcedureLoaderFactory
-    phantomjs.procedure.procedure_validator.class: JonnyW\PhantomJs\Procedure\ProcedureValidator
-    phantomjs.procedure.procedure_compiler.class: JonnyW\PhantomJs\Procedure\ProcedureCompiler
+    phantomjs.procedure.procedure_loader.class: LittlePolarApps\PhantomJs\Procedure\ProcedureLoader
+    phantomjs.procedure.chain_loader.class: LittlePolarApps\PhantomJs\Procedure\ChainProcedureLoader
+    phantomjs.procedure.procedure_factory.class: LittlePolarApps\PhantomJs\Procedure\ProcedureFactory
+    phantomjs.procedure.procedure_loader_factory.class: LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderFactory
+    phantomjs.procedure.procedure_validator.class: LittlePolarApps\PhantomJs\Procedure\ProcedureValidator
+    phantomjs.procedure.procedure_compiler.class: LittlePolarApps\PhantomJs\Procedure\ProcedureCompiler
 
 ############
 ### HTTP ###
 ############
 
-    phantomjs.http.message_factory.class: JonnyW\PhantomJs\Http\MessageFactory
+    phantomjs.http.message_factory.class: LittlePolarApps\PhantomJs\Http\MessageFactory
 
 ################
 ### PARSING ####
 ################
 
-    phantomjs.parser.json_parser.class: JonnyW\PhantomJs\Parser\JsonParser
+    phantomjs.parser.json_parser.class: LittlePolarApps\PhantomJs\Parser\JsonParser
 
 ###################
 ### VALIDATION ####
 ###################
 
-    phantomjs.validator.esprima.class: JonnyW\PhantomJs\Validator\Esprima
+    phantomjs.validator.esprima.class: LittlePolarApps\PhantomJs\Validator\Esprima
 
 ##################
 ### TEMPLATES ####
 ##################
 
-    phantomjs.template.template_renderer.class: JonnyW\PhantomJs\Template\TemplateRenderer
+    phantomjs.template.template_renderer.class: LittlePolarApps\PhantomJs\Template\TemplateRenderer
     phantomjs.twig.environment.class: Twig_Environment
     phantomjs.twig.lexer.class: Twig_Lexer
     phantomjs.twig.string_loader.class: Twig_Loader_String
@@ -58,5 +58,5 @@ parameters:
 ### RESOURCES ####
 ##################
 
-    phantomjs.cache.file_cache.class: JonnyW\PhantomJs\Cache\FileCache
+    phantomjs.cache.file_cache.class: LittlePolarApps\PhantomJs\Cache\FileCache
     phantomjs.loader.file_locator.class: Symfony\Component\Config\FileLocator

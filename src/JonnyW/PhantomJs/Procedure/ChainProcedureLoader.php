@@ -6,12 +6,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Procedure;
+namespace LittlePolarApps\PhantomJs\Procedure;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ChainProcedureLoader implements ProcedureLoaderInterface
 {
@@ -38,7 +38,7 @@ class ChainProcedureLoader implements ProcedureLoaderInterface
      * Add procedure loader.
      *
      * @access public
-     * @param  \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
+     * @param  \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface $procedureLoader
      * @return void
      */
     public function addLoader(ProcedureLoaderInterface $procedureLoader)
@@ -52,11 +52,11 @@ class ChainProcedureLoader implements ProcedureLoaderInterface
      * @access public
      * @param  string                                         $id
      * @throws \InvalidArgumentException
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureInterface
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureInterface
      */
     public function load($id)
     {
-        /** @var \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface $loader **/
+        /** @var \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface $loader **/
         foreach ($this->procedureLoaders as $loader) {
 
             try {
@@ -83,7 +83,7 @@ class ChainProcedureLoader implements ProcedureLoaderInterface
      */
     public function loadTemplate($id, $extension = 'proc')
     {
-        /** @var \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface $loader **/
+        /** @var \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface $loader **/
         foreach ($this->procedureLoaders as $loader) {
 
             try {

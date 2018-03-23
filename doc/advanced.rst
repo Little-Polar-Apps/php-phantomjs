@@ -20,7 +20,7 @@ in via the client before a request:
 
         <?php
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         $client->addOption('--load-images=true');
@@ -39,7 +39,7 @@ multiple PhantomJS options:
 
         <?php
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         $client->addOption('--config=/path/to/config.json');
@@ -72,7 +72,7 @@ request you are running the capture procedure.
 
         <?php
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client->getMessageFactory()->createRequest(); // ~/Resources/procedures/default.proc
         $client->getMessageFactory()->createCaptureRequest(); // ~/Resources/procedures/capture.proc
@@ -202,7 +202,7 @@ custom accessors, simply extend the request class with your own:
 
         <?php
 
-        use JonnyW\PhantomJs\Message\Request;
+        use LittlePolarApps\PhantomJs\Message\Request;
         
         class CustomRequest extends Request
         {
@@ -234,7 +234,7 @@ pass it to the client:
 
         <?php
 
-        use JonnyW\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\Client;
         
         $client = Client::getInstance();
         
@@ -262,8 +262,8 @@ loader easy:
 
         <?php
         
-        use JonnyW\PhantomJs\Client;
-        use JonnyW\PhantomJs\DependencyInjection\ServiceContainer;
+        use LittlePolarApps\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\DependencyInjection\ServiceContainer;
         
         $location = '/path/to/your/procedure/directory';
         
@@ -320,7 +320,7 @@ request:
 
     <?php
 
-        use JonnyW\PhantomJs\Message\Request;
+        use LittlePolarApps\PhantomJs\Message\Request;
         
         class CustomRequest extends Request
         {
@@ -338,8 +338,8 @@ Below is a full example for clarity:
 
         <?php
         
-        use JonnyW\PhantomJs\Client;
-        use JonnyW\PhantomJs\DependencyInjection\ServiceContainer;
+        use LittlePolarApps\PhantomJs\Client;
+        use LittlePolarApps\PhantomJs\DependencyInjection\ServiceContainer;
         
         $location = '/path/to/your/procedure/directory';
         

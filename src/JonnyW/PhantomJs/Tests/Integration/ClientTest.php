@@ -6,16 +6,16 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Tests\Integration;
+namespace LittlePolarApps\PhantomJs\Tests\Integration;
 
-use JonnyW\PhantomJs\Test\TestCase;
-use JonnyW\PhantomJs\Client;
-use JonnyW\PhantomJs\DependencyInjection\ServiceContainer;
+use LittlePolarApps\PhantomJs\Test\TestCase;
+use LittlePolarApps\PhantomJs\Client;
+use LittlePolarApps\PhantomJs\DependencyInjection\ServiceContainer;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ClientTest extends TestCase
 {
@@ -81,7 +81,7 @@ EOF;
      */
     public function testSyntaxExceptionIsThrownIfRequestProcedureContainsSyntaxError()
     {
-        $this->setExpectedException('\JonnyW\PhantomJs\Exception\SyntaxException');
+        $this->setExpectedException('\LittlePolarApps\PhantomJs\Exception\SyntaxException');
 
         $content = 'TEST_PROCEDURE';
 
@@ -119,7 +119,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-default.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-default.php');
 
         $client->send($request, $response);
 
@@ -141,7 +141,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-default.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-default.php');
         $request->setRequestData(array(
             'test1' => 'http://test.com',
             'test2' => 'A string with an \' ) / # some other invalid [ characters.'
@@ -167,7 +167,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-default.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-default.php');
 
         $client->send($request, $response);
 
@@ -189,7 +189,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-console-error.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-console-error.php');
 
         $client->send($request, $response);
 
@@ -214,7 +214,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-console-error.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-console-error.php');
 
         $client->send($request, $response);
 
@@ -237,7 +237,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-console-error.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-console-error.php');
 
         $client->send($request, $response);
 
@@ -258,7 +258,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('POST');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-post.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-post.php');
         $request->setRequestData(array(
             'test1' => 'http://test.com',
             'test2' => 'A string with an \' ) / # some other invalid [ characters.'
@@ -288,7 +288,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-console-error.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-console-error.php');
         $request->setOutputFile($file);
 
         $client->send($request, $response);
@@ -317,7 +317,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-capture.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
         $request->setCaptureDimensions($width, $height);
 
@@ -347,7 +347,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-capture.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
 
         $client->send($request, $response);
@@ -376,7 +376,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-capture.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
         $request->setPaperSize(sprintf('%scm', $width), sprintf('%scm', $height));
         $request->setMargin('0cm');
@@ -410,7 +410,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-capture.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
         $request->setFormat('A4');
         $request->setMargin('0cm');
@@ -444,7 +444,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-capture.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-capture.php');
         $request->setOutputFile($file);
         $request->setFormat('A4');
         $request->setOrientation('landscape');
@@ -480,7 +480,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-default.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-default.php');
         $request->setViewportsize($width, $height);
 
         $client->send($request, $response);
@@ -511,7 +511,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-default.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-default.php');
         $request->setViewportsize($width, $height);
 
         $client->send($request, $response);
@@ -540,7 +540,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-default.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-default.php');
         $request->setDelay($delay);
 
         $client->send($request, $response);
@@ -569,7 +569,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-default.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-default.php');
         $request->setDelay($delay);
 
         $client->send($request, $response);
@@ -598,7 +598,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-default.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-default.php');
         $request->setDelay($delay);
 
         $client->send($request, $response);
@@ -631,7 +631,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-capture.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-capture.php');
         $request->setDelay($delay);
 
         $client->send($request, $response);
@@ -660,7 +660,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-capture.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-capture.php');
         $request->setDelay($delay);
 
         $client->send($request, $response);
@@ -689,7 +689,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-capture.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-capture.php');
         $request->setDelay($delay);
 
         $client->send($request, $response);
@@ -721,7 +721,7 @@ EOF;
         $response = $client->getMessageFactory()->createResponse();
 
         $request->setMethod('GET');
-        $request->setUrl('http://jonnyw.kiwi/tests/test-default.php');
+        $request->setUrl('http://little-polar-apps.kiwi/tests/test-default.php');
 
         $client->send($request, $response);
 
@@ -735,7 +735,7 @@ EOF;
     /**
      * Get client instance.
      *
-     * @return \JonnyW\PhantomJs\Client
+     * @return \LittlePolarApps\PhantomJs\Client
      */
     protected function getClient()
     {

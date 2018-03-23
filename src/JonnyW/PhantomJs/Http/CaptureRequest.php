@@ -7,14 +7,14 @@
  * file that was distributed with this source code.
  */
 
-namespace JonnyW\PhantomJs\Http;
+namespace LittlePolarApps\PhantomJs\Http;
 
-use JonnyW\PhantomJs\Exception\NotWritableException;
+use LittlePolarApps\PhantomJs\Exception\NotWritableException;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class CaptureRequest extends AbstractRequest
     implements CaptureRequestInterface
@@ -74,7 +74,7 @@ class CaptureRequest extends AbstractRequest
      * @param  string                                $url     (default: null)
      * @param  string                                $method  (default: RequestInterface::METHOD_GET)
      * @param  int                                   $timeout (default: 5000)
-     * @return \JonnyW\PhantomJs\Http\CaptureRequest
+     * @return \LittlePolarApps\PhantomJs\Http\CaptureRequest
      */
     public function __construct($url = null, $method = RequestInterface::METHOD_GET, $timeout = 5000)
     {
@@ -106,7 +106,7 @@ class CaptureRequest extends AbstractRequest
      *
      * @access public
      * @param  string                                 $type
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setType($type)
     {
@@ -123,7 +123,7 @@ class CaptureRequest extends AbstractRequest
      * @param  int                                    $height
      * @param  int                                    $top    (default: 0)
      * @param  int                                    $left   (default: 0)
-     * @return \JonnyW\PhantomJs\Http\AbstractRequest
+     * @return \LittlePolarApps\PhantomJs\Http\AbstractRequest
      */
     public function setCaptureDimensions($width, $height, $top = 0, $left = 0)
     {
@@ -184,8 +184,8 @@ class CaptureRequest extends AbstractRequest
      *
      * @access public
      * @param  string                                           $file
-     * @throws \JonnyW\PhantomJs\Exception\NotWritableException
-     * @return \JonnyW\PhantomJs\Http\CaptureRequest
+     * @throws \LittlePolarApps\PhantomJs\Exception\NotWritableException
+     * @return \LittlePolarApps\PhantomJs\Http\CaptureRequest
      */
     public function setOutputFile($file)
     {

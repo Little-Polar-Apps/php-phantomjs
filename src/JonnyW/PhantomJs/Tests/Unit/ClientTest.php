@@ -6,18 +6,18 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace JonnyW\PhantomJs\Tests\Unit;
+namespace LittlePolarApps\PhantomJs\Tests\Unit;
 
-use JonnyW\PhantomJs\Client;
-use JonnyW\PhantomJs\Engine;
-use JonnyW\PhantomJs\Http\MessageFactoryInterface;
-use JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface;
-use JonnyW\PhantomJs\Procedure\ProcedureCompilerInterface;
+use LittlePolarApps\PhantomJs\Client;
+use LittlePolarApps\PhantomJs\Engine;
+use LittlePolarApps\PhantomJs\Http\MessageFactoryInterface;
+use LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface;
+use LittlePolarApps\PhantomJs\Procedure\ProcedureCompilerInterface;
 
 /**
  * PHP PhantomJs
  *
- * @author Jon Wenmoth <contact@jonnyw.me>
+ * @author Jon Wenmoth <contact@little-polar-apps.me>
  */
 class ClientTest extends \PHPUnit_Framework_TestCase
 {
@@ -35,7 +35,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      */
     public function testCanGetClientThroughFactoryMethod()
     {
-        $this->assertInstanceOf('\JonnyW\PhantomJs\Client', Client::getInstance());
+        $this->assertInstanceOf('\LittlePolarApps\PhantomJs\Client', Client::getInstance());
     }
 
     /**
@@ -52,7 +52,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         $client = $this->getClient($engine, $procedureLoader, $procedureCompiler, $messageFactory);
 
-        $this->assertInstanceOf('\JonnyW\PhantomJs\Engine', $client->getEngine());
+        $this->assertInstanceOf('\LittlePolarApps\PhantomJs\Engine', $client->getEngine());
     }
 
     /**
@@ -69,7 +69,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         $client = $this->getClient($engine, $procedureLoader, $procedureCompiler, $messageFactory);
 
-        $this->assertInstanceOf('\JonnyW\PhantomJs\Http\MessageFactoryInterface', $client->getMessageFactory());
+        $this->assertInstanceOf('\LittlePolarApps\PhantomJs\Http\MessageFactoryInterface', $client->getMessageFactory());
     }
 
     /**
@@ -86,7 +86,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
 
         $client = $this->getClient($engine, $procedureLoader, $procedureCompiler, $messageFactory);
 
-        $this->assertInstanceOf('\JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface', $client->getProcedureLoader());
+        $this->assertInstanceOf('\LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface', $client->getProcedureLoader());
     }
 
 /** +++++++++++++++++++++++++++++++++++ **/
@@ -96,11 +96,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     /**
      * Get client instance
      *
-     * @param  \JonnyW\PhantomJs\Engine                               $engine
-     * @param  \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface   $procedureLoader
-     * @param  \JonnyW\PhantomJs\Procedure\ProcedureCompilerInterface $procedureCompiler
-     * @param  \JonnyW\PhantomJs\Http\MessageFactoryInterface         $messageFactory
-     * @return \JonnyW\PhantomJs\Client
+     * @param  \LittlePolarApps\PhantomJs\Engine                               $engine
+     * @param  \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface   $procedureLoader
+     * @param  \LittlePolarApps\PhantomJs\Procedure\ProcedureCompilerInterface $procedureCompiler
+     * @param  \LittlePolarApps\PhantomJs\Http\MessageFactoryInterface         $messageFactory
+     * @return \LittlePolarApps\PhantomJs\Client
      */
     protected function getClient(Engine $engine, ProcedureLoaderInterface $procedureLoader, ProcedureCompilerInterface $procedureCompiler, MessageFactoryInterface $messageFactory)
     {
@@ -117,11 +117,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      * Get engine
      *
      * @access protected
-     * @return \JonnyW\PhantomJs\Engine
+     * @return \LittlePolarApps\PhantomJs\Engine
      */
     protected function getEngine()
     {
-        $engine = $this->getMock('\JonnyW\PhantomJs\Engine');
+        $engine = $this->getMock('\LittlePolarApps\PhantomJs\Engine');
 
         return $engine;
     }
@@ -130,11 +130,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      * Get message factory
      *
      * @access protected
-     * @return \JonnyW\PhantomJs\Http\MessageFactoryInterface
+     * @return \LittlePolarApps\PhantomJs\Http\MessageFactoryInterface
      */
     protected function getMessageFactory()
     {
-        $messageFactory = $this->getMock('\JonnyW\PhantomJs\Http\MessageFactoryInterface');
+        $messageFactory = $this->getMock('\LittlePolarApps\PhantomJs\Http\MessageFactoryInterface');
 
         return $messageFactory;
     }
@@ -143,11 +143,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      * Get procedure loader.
      *
      * @access protected
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface
      */
     protected function getProcedureLoader()
     {
-        $procedureLoader = $this->getMock('\JonnyW\PhantomJs\Procedure\ProcedureLoaderInterface');
+        $procedureLoader = $this->getMock('\LittlePolarApps\PhantomJs\Procedure\ProcedureLoaderInterface');
 
         return $procedureLoader;
     }
@@ -156,11 +156,11 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      * Get procedure validator.
      *
      * @access protected
-     * @return \JonnyW\PhantomJs\Procedure\ProcedureCompilerInterface
+     * @return \LittlePolarApps\PhantomJs\Procedure\ProcedureCompilerInterface
      */
     protected function getProcedureCompiler()
     {
-        $procedureCompiler = $this->getMock('\JonnyW\PhantomJs\Procedure\ProcedureCompilerInterface');
+        $procedureCompiler = $this->getMock('\LittlePolarApps\PhantomJs\Procedure\ProcedureCompilerInterface');
 
         return $procedureCompiler;
     }
